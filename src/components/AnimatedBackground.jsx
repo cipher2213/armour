@@ -5,9 +5,9 @@ const AnimatedBackground = () => {
     <div className="fixed inset-0 -z-10 overflow-hidden bg-armory-darker">
       {/* Background Image */}
       <div 
-        className="absolute inset-0 opacity-10"
+        className="absolute inset-0 opacity-5"
         style={{
-          backgroundImage: 'url(https://images.unsplash.com/photo-1614935151651-0bea6508db6b?w=1920&q=80)',
+          backgroundImage: 'url(https://images.unsplash.com/photo-1551732998-9ed11bcf0243?w=1920&q=80)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'

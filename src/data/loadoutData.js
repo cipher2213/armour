@@ -6,7 +6,7 @@ export const baseModels = [
     type: 'Stealth Operative',
     description: 'Silent. Precise. Invisible.',
     rarity: 'legendary',
-    image: 'https://images.unsplash.com/photo-1595590424283-b8f17842773f?w=800&q=80', // Tactical gear
+    image: 'https://images.unsplash.com/photo-1590955256736-d7fa8e1a5f33?w=800&q=80', // Dark stealth weapon
     baseStats: {
       stealth: 95,
       mobility: 80,
@@ -22,7 +22,7 @@ export const baseModels = [
     type: 'Heavy Assault',
     description: 'Maximum firepower. Zero compromise.',
     rarity: 'legendary',
-    image: 'https://images.unsplash.com/photo-1563089145-599997674d42?w=800&q=80', // Heavy armor
+    image: 'https://images.unsplash.com/photo-1595590424283-b8f17842773f?w=800&q=80', // Heavy tactical rifle
     baseStats: {
       stealth: 30,
       mobility: 50,
@@ -38,7 +38,7 @@ export const baseModels = [
     type: 'Tactical Infiltrator',
     description: 'Balanced lethality. Adaptive protocol.',
     rarity: 'epic',
-    image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&q=80', // Tactical equipment
+    image: 'https://images.unsplash.com/photo-1590956041018-23a15fcf8b27?w=800&q=80', // Modern tactical weapon
     baseStats: {
       stealth: 75,
       mobility: 85,
@@ -54,7 +54,7 @@ export const baseModels = [
     type: 'Elite Guardian',
     description: 'Defense reimagined. Protection perfected.',
     rarity: 'epic',
-    image: 'https://images.unsplash.com/photo-1581092918484-8313e1f6e246?w=800&q=80', // Protective gear
+    image: 'https://images.unsplash.com/photo-1596492784531-6e6eb5ea9993?w=800&q=80', // Defensive tactical rifle
     baseStats: {
       stealth: 50,
       mobility: 60,
@@ -70,7 +70,7 @@ export const baseModels = [
     type: 'Recon Specialist',
     description: 'Light. Fast. Untraceable.',
     rarity: 'rare',
-    image: 'https://images.unsplash.com/photo-1582134851217-47a321b14e8f?w=800&q=80', // Lightweight gear
+    image: 'https://images.unsplash.com/photo-1590955256736-d7fa8e1a5f33?w=800&q=80', // Lightweight compact weapon
     baseStats: {
       stealth: 85,
       mobility: 95,
@@ -320,28 +320,28 @@ export const skins = [
     name: 'Military Standard',
     rarity: 'common',
     description: 'Clean tactical finish',
-    preview: 'https://images.unsplash.com/photo-1595590424283-b8f17842773f?w=400&q=80',
+    preview: 'https://images.unsplash.com/photo-1616628188540-925618b98318?w=400&q=80',
   },
   {
     id: 'carbon',
     name: 'Carbon Fiber',
     rarity: 'rare',
     description: 'Lightweight composite',
-    preview: 'https://images.unsplash.com/photo-1513828583688-c52646db42da?w=400&q=80',
+    preview: 'https://images.unsplash.com/photo-1618332231873-1d1bba6a4f5e?w=400&q=80',
   },
   {
     id: 'digital',
     name: 'Digital Camo',
     rarity: 'epic',
     description: 'Adaptive pattern technology',
-    preview: 'https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?w=400&q=80',
+    preview: 'https://images.unsplash.com/photo-1563089145-599997674d42?w=400&q=80',
   },
   {
     id: 'reactive',
     name: 'Reactive Hex',
     rarity: 'legendary',
     description: 'Animated hexagonal matrix',
-    preview: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400&q=80',
+    preview: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400&q=80',
   },
 ];
 
