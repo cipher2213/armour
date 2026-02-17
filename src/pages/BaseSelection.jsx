@@ -124,9 +124,9 @@ const BaseSelection = () => {
                 </div>
 
                 <div className="text-center relative z-10">
-                  {/* Model Icon/Image Placeholder */}
+                  {/* Model Image */}
                   <motion.div
-                    className="w-64 h-64 mx-auto mb-6 border-2 border-armory-blue rounded-lg flex items-center justify-center text-8xl bg-gradient-to-br from-armory-dark to-armory-darker"
+                    className="w-64 h-64 mx-auto mb-6 border-2 border-armory-blue rounded-lg overflow-hidden bg-gradient-to-br from-armory-dark to-armory-darker"
                     animate={{
                       boxShadow: [
                         '0 0 20px rgba(0,212,255,0.3)',
@@ -136,7 +136,15 @@ const BaseSelection = () => {
                     }}
                     transition={{ duration: 2, repeat: Infinity }}
                   >
-                    🎯
+                    <img 
+                      src={currentModel.image} 
+                      alt={currentModel.name}
+                      className="w-full h-full object-cover"
+                      onError={(e) => {
+                        e.target.style.display = 'none';
+                        e.target.parentElement.innerHTML = '<div class="flex items-center justify-center text-8xl h-full">🎯</div>';
+                      }}
+                    />
                   </motion.div>
 
                   <h2 className="text-4xl font-display font-bold neon-text mb-2">
@@ -166,18 +174,25 @@ const BaseSelection = () => {
               →
             </button>
 
-            {/* Indicator Dots */}
-            <div className="flex justify-center space-x-2 mt-6">
-              {baseModels.map((_, index) => (
+            {/* Thumbnail Navigation */}
+            <div className="flex justify-center space-x-3 mt-6">
+              {baseModels.map((model, index) => (
                 <button
                   key={index}
                   onClick={() => setSelectedIndex(index)}
-                  className={`w-2 h-2 rounded-full transition-all ${
+                  className={`w-16 h-16 rounded border-2 transition-all overflow-hidden ${
                     index === selectedIndex
-                      ? 'bg-armory-blue w-8'
-                      : 'bg-gray-600 hover:bg-gray-500'
+                      ? 'border-armory-blue shadow-[0_0_15px_rgba(0,212,255,0.5)]'
+                      : 'border-gray-600 hover:border-armory-blue/50 opacity-60 hover:opacity-100'
                   }`}
-                />
+                  title={model.name}
+                >
+                  <img 
+                    src={model.image} 
+                    alt={model.name}
+                    className="w-full h-full object-cover"
+                  />
+                </button>
               ))}
             </div>
           </div>

@@ -83,17 +83,21 @@ const SkinSelector = () => {
                   <p className="text-xs text-gray-400">{skin.description}</p>
                 </div>
 
-                {/* Skin Preview */}
-                <div 
-                  className="w-16 h-16 rounded border-2 border-gray-700 ml-4"
-                  style={{
-                    background: `linear-gradient(135deg, 
-                      ${skin.rarity === 'legendary' ? '#fbbf24' :
-                        skin.rarity === 'epic' ? '#a855f7' :
-                        skin.rarity === 'rare' ? '#3b82f6' : '#9ca3af'}20,
-                      transparent)`,
-                  }}
-                />
+                {/* Skin Preview Image */}
+                <div className="w-20 h-20 rounded border-2 border-gray-700 ml-4 overflow-hidden flex-shrink-0">
+                  <img 
+                    src={skin.preview} 
+                    alt={skin.name}
+                    className="w-full h-full object-cover"
+                    style={{
+                      filter: `hue-rotate(${
+                        skin.rarity === 'legendary' ? '0deg' :
+                        skin.rarity === 'epic' ? '270deg' :
+                        skin.rarity === 'rare' ? '210deg' : '0deg'
+                      })`
+                    }}
+                  />
+                </div>
               </div>
             </motion.div>
           );

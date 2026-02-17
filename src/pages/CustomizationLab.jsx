@@ -209,22 +209,35 @@ const CustomizationLab = () => {
                 </div>
               </div>
 
-              {/* 3D Preview Placeholder */}
+              {/* Model Preview with Image */}
               <div className="relative aspect-square bg-gradient-to-br from-armory-dark to-armory-darker rounded-lg border-2 border-armory-blue mb-6 overflow-hidden">
-                <motion.div
-                  className="absolute inset-0 flex items-center justify-center text-9xl"
-                  animate={{ rotateY: 360 }}
-                  transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
-                >
-                  🎯
-                </motion.div>
+                {currentLoadout.baseModel && (
+                  <img 
+                    src={currentLoadout.baseModel.image} 
+                    alt={currentLoadout.baseModel.name}
+                    className="absolute inset-0 w-full h-full object-cover opacity-80"
+                  />
+                )}
+                
+                {/* Overlay gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-armory-darker via-transparent to-transparent" />
                 
                 {/* Scanlines */}
                 <motion.div
-                  className="absolute left-0 right-0 h-1 bg-armory-blue opacity-30"
+                  className="absolute left-0 right-0 h-1 bg-armory-blue opacity-30 z-10"
                   animate={{ top: ['0%', '100%'] }}
                   transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
                 />
+                
+                {/* Model name overlay */}
+                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent z-10">
+                  <p className="text-lg font-display font-bold text-armory-cyan">
+                    {currentLoadout.baseModel?.name}
+                  </p>
+                  <p className="text-xs text-gray-400">
+                    {currentLoadout.baseModel?.type}
+                  </p>
+                </div>
               </div>
 
               {/* Current Stats */}

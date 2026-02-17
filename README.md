@@ -83,6 +83,42 @@ agent-armory/
 3. **Customization Lab** - Add attachments, see real-time stat changes
 4. **Save & Compare** - Store builds and view agent profile
 
+## 🖼️ IMAGES & ASSETS
+
+The application uses real images for an immersive experience:
+
+### Current Image Sources
+
+- **Base Models**: High-quality tactical gear images from Unsplash
+- **Weapon Skins**: Texture and pattern images
+- **Background**: Subtle atmosphere imagery
+
+### Adding Custom Images
+
+To use your own images:
+
+1. Place images in the `public/` folder:
+   - `public/models/` - Base model images (800x800px recommended)
+   - `public/skins/` - Weapon skin previews (400x400px)
+   - `public/backgrounds/` - Background images (1920x1080px)
+
+2. Update image paths in `src/data/loadoutData.js`:
+   ```javascript
+   {
+     id: 'phantom',
+     name: 'PHANTOM',
+     image: '/models/phantom.png', // Your custom image
+     // ...
+   }
+   ```
+
+### Image Requirements
+
+- **Format**: PNG, JPG, or WebP
+- **Base Models**: Square format, 800x800px minimum
+- **Skins**: Square format, 400x400px minimum
+- **Backgrounds**: Wide format, 1920x1080px recommended
+
 ## 🎨 DESIGN LANGUAGE
 
 - **Black Glass Panels** - Semi-transparent overlays with blur

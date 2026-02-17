@@ -3,8 +3,19 @@ import { motion } from 'framer-motion';
 const AnimatedBackground = () => {
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden bg-armory-darker">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 opacity-10"
+        style={{
+          backgroundImage: 'url(https://images.unsplash.com/photo-1614935151651-0bea6508db6b?w=1920&q=80)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      />
+      
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-armory-dark via-armory-darker to-black opacity-90" />
+      <div className="absolute inset-0 bg-gradient-to-br from-armory-dark via-armory-darker to-black opacity-95" />
       
       {/* Animated Grid */}
       <div className="absolute inset-0 opacity-20">

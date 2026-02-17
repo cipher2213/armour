@@ -146,3 +146,5 @@ const ComparisonView = () => {
 };
 
 export default ComparisonView;
+
+
